@@ -14,7 +14,7 @@ export default class AppPage extends Component {
 
   }
 
-  handleSignIn(e) {
+  handleSignIn = (e) => {
     e.preventDefault();
     const origin = window.location.origin;
     redirectToSignIn(origin, origin + "/manifest.json", [
@@ -33,7 +33,7 @@ export default class AppPage extends Component {
     // redirectToSignInWithAuthRequest(authRequest)
   }
 
-  handleSignOut(e) {
+  handleSignOut = (e) => {
     e.preventDefault();
     signUserOut(window.location.origin);
   }
